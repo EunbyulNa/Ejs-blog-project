@@ -27,6 +27,20 @@ app.get("/contact", function(req,res){
   res.render("contact", { contact: contactContent})
 })
 
+app.get("/compose", function(req,res) {
+  res.render("compose")
+})
+
+
+app.post("/compose", function(req,res) {
+
+  const blogPost = {
+    title: req.body.postTitle,
+    body: req.body.postBody
+  };
+
+
+})
 
 
 
