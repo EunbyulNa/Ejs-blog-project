@@ -19,7 +19,9 @@ var blogPosts = [];
 
 app.get("/", function(req,res){
   res.render("home", { homeContent: homeStartingContent,
-                       posting: blogPosts})
+                       blogPosts: blogPosts
+
+                     })
 
 
 })
@@ -41,7 +43,7 @@ app.post("/compose", function(req,res) {
 
   const blogPost = {
     title: req.body.postTitle,
-    body: req.body.postBody
+    contents: req.body.postBody
   };
 
   blogPosts.push(blogPost)
