@@ -62,10 +62,8 @@ app.get("/posts/:postingName", function(req,res){
   blogPosts.forEach(function(post) {
     const storedTitle = _.lowerCase(post.title);
     if( storedTitle === reqPostingTitle) {
-      res.render("post",
-      {title: post.title,
-       content: post.contents} )
-
+      res.render("post",{ title: post.title,
+                          content: post.contents} )
     }
   })
 
